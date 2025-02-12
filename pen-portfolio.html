@@ -17,7 +17,7 @@
     
     <nav class="border-gray-200 bg-white/40 fixed top-0 left-0 w-full z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="#Home" class="flex items-center space-x-3 rtl:space-x-reverse">
               <img src="images/flower.png" class="h-10" alt="Pen's logo" />
           </a>
           <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
@@ -27,7 +27,7 @@
               </svg>
           </button>
           <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-            <ul class="flex flex-col font-semibold text-lg mt-4 rounded-lg bg-transparent md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <ul class="flex flex-col font-semibold text-lg mt-5 rounded-lg bg-transparent md:space-x-30 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
               <li>
                 <a href="#Home" class="relative text-pink-500 hover:text-pink-400 cursor-pointer transition-all ease-in-out 
                 before:transition-[width] before:ease-in-out before:duration-700 
@@ -69,7 +69,7 @@
         </div>
     </nav>
       
-  <div id="Home" class="h-svh bg-cover bg-center bg-no-repeat mt-0 pt-0" style="background-image: url('images/pink-clouds.jpg');">
+  <div data-aos="fade-up" id="Home" class="h-svh bg-cover bg-center bg-no-repeat mt-0 pt-0" style="background-image: url('images/pink-clouds.jpg');">
     <div class="max-w-screen-xl mx-auto p-4">
 
       </div>
@@ -84,16 +84,16 @@
     </div>
     
     <div id="Contact" class="h-auto flex flex-col md:flex-row items-center justify-center md:justify-evenly w-full px-5 py-10 bg-transparent">
-        <div class="p-4 mx-auto max-w-xl bg-transparent text-center md:text-left">
+        <div class="p-4 mx-auto max-w-xl bg-transparent text-center md:text-left delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:opacity-0" data-taos-offset="400">
             <h1 class="text-3xl text-gray-800 font-bold">Get in touch</h1>
             <p class="max-w-lg text-center md:text-left text-gray-800 mt-4 text-lg">
                 Building strong professional relationships is essential to driving success and innovation. 
                 If you believe my skills and experience align with your needs, I would be happy to explore potential opportunities together.
             </p>
             <form class="mt-8 space-y-4" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="19eb1720-689a-400f-93a7-43e1664a9e10">
+            <input type="hidden" name="access_key" value="19eb1720-689a-400f-93a7-43e1664a9e10">
 
-                <input type="text" name="name" placeholder="Name" required
+            <input type="text" name="name" placeholder="Name" required
                 class="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all rounded-xl" />
             <input type="email" name="email" placeholder="Email" required
                 class="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all rounded-xl" />
@@ -108,7 +108,7 @@
         </form>
         </div>
     
-        <div class="p-4 mx-auto max-w-lg bg-transparent hidden md:block">
+        <div class="p-4 mx-auto max-w-lg bg-transparent hidden md:block delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:opacity-0" data-taos-offset="400">
             <img src="images/person.png" alt="contact form person" class="h-64 mx-auto" />
         </div>
     </div>    
@@ -126,5 +126,7 @@
         </div>
     </div>
 
+    <script>document.documentElement.classList.add('js')</script>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 </body>
 </html>
