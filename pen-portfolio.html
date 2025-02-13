@@ -4,28 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        ::-webkit-scrollbar {
-        display: none;
-        }
-
-        html {
-            scrollbar-width: none;
-        }
-
-        body {
-            -ms-overflow-style: none;
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    * {
+        ::-webkit-scrollbar { display: none; }
+        html { scrollbar-width: none; }
+        body { -ms-overflow-style: none; overflow-x: hidden; }
+        * {
         font-family: 'Poppins', sans-serif;
     }
     </style>
     <link rel="shortcut icon" href="images/ribbon.png">
     <title>Penelope Inaho</title>
 </head>
-<body class="overflow-y-scroll">    
+<body class="overflow-x-hidden">    
     <nav class="border-gray-400 bg-white/50 fixed top-0 left-0 w-full z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="#Home" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -80,34 +71,64 @@
         </div>
     </nav>
       
-    <div id="Home" class="h-svh bg-cover bg-center bg-no-repeat mt-0 pt-0 flex justify-center items-center" style="background-image: url('images/pink-clouds.jpg');">
-        <div class="bg-transparent h-200 w-300 flex justify-center items-start p-4 mx-auto max-w-xl bg-transparent text-center md:text-left delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0" data-taos-offset="300">
-            <div class="max-w-svw h-auto w-300 text-white flex justify-top items-center flex-col text-center mt-75 bg-transparent">
-                <div class="w-300 justify-center items-center flex flex-col">
-                    <p class="text-6xl max-w-300 font-semibold mb-5">Hi! I'm <span class="text-pink-500 text-6xl font-bold">Penelope Inaho <br></span></p>
-                    <p class="w-300 text-3xl font-semibold mb-5">BA in Communication graduate, eager to contribute my skills in media, writing, and communication</p> 
-                    <a href="#About">
-                        <button class="relative h-[auto] w-50 overflow-hidden bg-white/80 text-pink-400 text-2xl font-semibold py-5 px-10 rounded-full shadow-2xl transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-600 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-600 hover:text-white hover:shadow-pink-400 hover:before:w-1/2 hover:before:bg-pink-400 hover:after:w-1/2 hover:after:bg-pink-400">
-                            <span class="relative z-10">
-                            Continue
-                            </span> 
-                        </button>
-                    </a>
-                </div>
-            </div>
+    <div id="Home" class="h-screen bg-cover bg-center bg-no-repeat flex justify-center items-center px-4" style="background-image: url('images/pink-clouds.jpg');">
+        <div class="text-white flex flex-col items-center text-center max-w-3xl delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0" data-taos-offset="300">
+            <p class="text-3xl md:text-6xl md:w-400 font-semibold mb-5">
+                Hi! I'm <span class="text-pink-500 font-bold">Penelope Inaho</span>
+            </p>
+            <p class="text-lg md:text-3xl md:w-300 font-semibold mb-10">
+                BA in Communication graduate, eager to contribute my skills in media, writing, and communication.
+            </p> 
+            <a href="#About">
+                <button class="relative h-[auto] w-50 overflow-hidden bg-white/80 text-pink-400 text-2xl font-semibold py-5 px-10 rounded-full shadow-2xl transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-600 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-600 hover:text-white hover:shadow-pink-400 hover:before:w-1/2 hover:before:bg-pink-400 hover:after:w-1/2 hover:after:bg-pink-400">
+                    <span class="relative z-10">
+                        Continue
+                    </span>
+                </button>
+            </a>
         </div>
-    </div>
+    </div>    
     
 
-    <div id="About" class="h-svh bg-white flex flex-row items-center justify-center">
-        <h1>About Me</h1>
+    <div id="About" class="h-svh bg-white flex flex-row items-center justify-center md:justify-between md:mx-10">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="h-full flex flex-col items-center justify-center hidden md:block md:w-90 md:ml-10">
+                <img src="images/about-pen.jpg" alt="pen's picture" class="h-full md:object-cover"/>
+            </div>
+            <div class="max-w-90 text-justify md:mx-8">
+                <h1 class="text-6xl md:text-8xl md:w-120 text-center font-bold md:text-left">About Me</h1>
+                <p class="text-2xl md:text-4xl md:w-100 text-pink-500 mt-4 text-center font-bold md:text-left">
+                    Penelope Inaho Lopez
+                </p>
+                <p class="font-medium text-lg text-gray-800 mt-4 md:text-left md:w-200 md:text-xl/7">
+                    A GEN-Z content copywriter/social media
+                    specialist, you can call me “Pen” for short! 
+                    <br><br>
+                    I am 22 years old and a graduate of Bachelor of Arts in Communication
+                    at Adamson University. I have a passion for content creation, gaming,
+                    reading, painting, and even writing may it be in feature, literature or
+                    articles. I also love listening to K-POP and POP music! 
+                    <br><br>
+                    I also read a lot of books during my free time. 
+                    <br>
+                    <span class="font-bold">FUN FACT:</span>  I can read one
+                    book in one seating! 🙂                    
+                </p>
+                <a href="pdf-files/LOPEZ CV.pdf" download>
+                    <button class="mt-15 px-6 py-2 cursor-pointer font-medium bg-pink-400 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
+                        <img src="images/downloads.png" alt="download button" class="h-5 inline-block mr-3">
+                        Resume
+                    </button>
+                </a>
+            </div>
+        </div>
     </div>
 
     <div id="Projects" class="h-svh bg-pink-300 flex flex-col items-center justify-center font-bold text-3xl text-white">
         <h1>Projects</h1>
     </div>
     
-    <div id="Contact" class="h-auto flex flex-row md:flex-row items-center justify-center md:justify-evenly w-full px-5 py-10 bg-transparent">
+    <div id="Contact" class="h-auto flex flex-row md:flex-row items-center justify-center md:justify-evenly w-full px-5 py-10 bg-transparent overflow-hidden">
         <div class="p-4 mx-auto max-w-xl bg-transparent text-center md:text-left delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:opacity-0" data-taos-offset="400">
             <h1 class="text-3xl text-gray-800 font-bold">Get in touch</h1>
             <p class="max-w-lg text-center md:text-left text-gray-800 mt-4 text-lg">
@@ -132,7 +153,7 @@
         </form>
         </div>
     
-        <div class="p-4 mx-auto max-w-lg bg-transparent hidden md:block delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:opacity-0" data-taos-offset="400">
+        <div class="p-4 mx-auto max-w-lg bg-transparent hidden md:block delay-[200ms] duration-[600ms] taos:translate-x-[100%] taos:opacity-0" data-taos-offset="400">
             <img src="images/person.png" alt="contact form person" class="h-64 mx-auto" />
         </div>
     </div>    
@@ -149,9 +170,9 @@
             &#9400;Harvey.dev
         </div>
     </div>
-
+    
     <script>document.documentElement.classList.add('js')</script>
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
-      
+
 </body>
 </html>
