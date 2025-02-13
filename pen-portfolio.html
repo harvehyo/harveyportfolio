@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style>
+        ::-webkit-scrollbar {
+        display: none;
+        }
+
+        html {
+            scrollbar-width: none;
+        }
+
+        body {
+            -ms-overflow-style: none;
+        }
+
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     * {
         font-family: 'Poppins', sans-serif;
@@ -13,11 +25,10 @@
     <link rel="shortcut icon" href="images/ribbon.png">
     <title>Penelope Inaho</title>
 </head>
-<body>
-    
-    <nav class="border-gray-200 bg-white/40 fixed top-0 left-0 w-full z-50">
+<body class="overflow-y-scroll">    
+    <nav class="border-gray-400 bg-white/50 fixed top-0 left-0 w-full z-50">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="#Home" class="flex items-center space-x-3 rtl:space-x-reverse">
               <img src="images/flower.png" class="h-10" alt="Pen's logo" />
           </a>
           <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
@@ -27,7 +38,7 @@
               </svg>
           </button>
           <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-            <ul class="flex flex-col font-semibold text-lg mt-4 rounded-lg bg-transparent md:space-x-10 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            <ul class="flex flex-col font-semibold text-lg mt-5 rounded-lg bg-transparent md:space-x-30 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
               <li>
                 <a href="#Home" class="relative text-pink-500 hover:text-pink-400 cursor-pointer transition-all ease-in-out 
                 before:transition-[width] before:ease-in-out before:duration-700 
@@ -38,13 +49,13 @@
                 hover:after:w-[50%] after:bottom-0 after:right-[50%]">Home</a>
               </li>
               <li>
-                <a href="#Skills" class="relative text-pink-500 hover:text-pink-400 cursor-pointer transition-all ease-in-out 
+                <a href="#About" class="relative text-pink-500 hover:text-pink-400 cursor-pointer transition-all ease-in-out 
                 before:transition-[width] before:ease-in-out before:duration-700 
                 before:absolute before:bg-pink-300 before:origin-center before:h-[1px] before:w-0 
                 hover:before:w-[50%] before:bottom-0 before:left-[50%] 
                 after:transition-[width] after:ease-in-out after:duration-700 
                 after:absolute after:bg-pink-300 after:origin-center after:h-[1px] after:w-0 
-                hover:after:w-[50%] after:bottom-0 after:right-[50%]">Skills</a>
+                hover:after:w-[50%] after:bottom-0 after:right-[50%]">About</a>
               </li>
               <li>
                 <a href="#Projects" class="relative text-pink-500 hover:text-pink-400 cursor-pointer transition-all ease-in-out 
@@ -69,31 +80,44 @@
         </div>
     </nav>
       
-  <div id="Home" class="h-svh bg-cover bg-center bg-no-repeat mt-0 pt-0" style="background-image: url('images/pink-clouds.jpg');">
-    <div class="max-w-screen-xl mx-auto p-4">
-
-      </div>
+    <div id="Home" class="h-svh bg-cover bg-center bg-no-repeat mt-0 pt-0 flex justify-center items-center" style="background-image: url('images/pink-clouds.jpg');">
+        <div class="bg-transparent h-200 w-300 flex justify-center items-start p-4 mx-auto max-w-xl bg-transparent text-center md:text-left delay-[300ms] duration-[600ms] taos:translate-y-[100%] taos:opacity-0" data-taos-offset="300">
+            <div class="max-w-svw h-auto w-300 text-white flex justify-top items-center flex-col text-center mt-75 bg-transparent">
+                <div class="w-300 justify-center items-center flex flex-col">
+                    <p class="text-6xl max-w-300 font-semibold mb-5">Hi! I'm <span class="text-pink-500 text-6xl font-bold">Penelope Inaho <br></span></p>
+                    <p class="w-300 text-3xl font-semibold mb-5">BA in Communication graduate, eager to contribute my skills in media, writing, and communication</p> 
+                    <a href="#About">
+                        <button class="relative h-[auto] w-50 overflow-hidden bg-white/80 text-pink-400 text-2xl font-semibold py-5 px-10 rounded-full shadow-2xl transition-all before:absolute before:left-0 before:top-0 before:h-full before:w-0 before:duration-600 after:absolute after:right-0 after:top-0 after:h-full after:w-0 after:duration-600 hover:text-white hover:shadow-pink-400 hover:before:w-1/2 hover:before:bg-pink-400 hover:after:w-1/2 hover:after:bg-pink-400">
+                            <span class="relative z-10">
+                            Continue
+                            </span> 
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+    
 
-    <div id="Skills" class="h-svh bg-white flex flex-col items-center justify-center font-bold text-3xl">
-        <h1> Skills to be followed</h1>
+    <div id="About" class="h-svh bg-white flex flex-row items-center justify-center">
+        <h1>About Me</h1>
     </div>
 
     <div id="Projects" class="h-svh bg-pink-300 flex flex-col items-center justify-center font-bold text-3xl text-white">
         <h1>Projects</h1>
     </div>
     
-    <div id="Contact" class="h-auto flex flex-col md:flex-row items-center justify-center md:justify-evenly w-full px-5 py-10 bg-transparent">
-        <div class="p-4 mx-auto max-w-xl bg-transparent text-center md:text-left">
+    <div id="Contact" class="h-auto flex flex-row md:flex-row items-center justify-center md:justify-evenly w-full px-5 py-10 bg-transparent">
+        <div class="p-4 mx-auto max-w-xl bg-transparent text-center md:text-left delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:opacity-0" data-taos-offset="400">
             <h1 class="text-3xl text-gray-800 font-bold">Get in touch</h1>
             <p class="max-w-lg text-center md:text-left text-gray-800 mt-4 text-lg">
                 Building strong professional relationships is essential to driving success and innovation. 
                 If you believe my skills and experience align with your needs, I would be happy to explore potential opportunities together.
             </p>
             <form class="mt-8 space-y-4" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="19eb1720-689a-400f-93a7-43e1664a9e10">
+            <input type="hidden" name="access_key" value="19eb1720-689a-400f-93a7-43e1664a9e10">
 
-                <input type="text" name="name" placeholder="Name" required
+            <input type="text" name="name" placeholder="Name" required
                 class="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all rounded-xl" />
             <input type="email" name="email" placeholder="Email" required
                 class="w-full py-2.5 px-4 text-gray-800 bg-gray-100 border focus:border-black focus:bg-transparent text-sm outline-none transition-all rounded-xl" />
@@ -108,7 +132,7 @@
         </form>
         </div>
     
-        <div class="p-4 mx-auto max-w-lg bg-transparent hidden md:block">
+        <div class="p-4 mx-auto max-w-lg bg-transparent hidden md:block delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:opacity-0" data-taos-offset="400">
             <img src="images/person.png" alt="contact form person" class="h-64 mx-auto" />
         </div>
     </div>    
@@ -126,5 +150,8 @@
         </div>
     </div>
 
+    <script>document.documentElement.classList.add('js')</script>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+      
 </body>
 </html>
